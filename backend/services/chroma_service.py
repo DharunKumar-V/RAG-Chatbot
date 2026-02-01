@@ -1,19 +1,24 @@
+import os
 import chromadb
-
-
-# ======================================================
-# ✅ TRUE DISK PERSISTENCE (NEW CHROMA WAY)
-# ======================================================
-
 from chromadb.config import Settings
+
+
+# ======================================================
+# ✅ ENV BASED PERSISTENCE (BEST PRACTICE)
+# ======================================================
+# Local  -> ./chroma_db
+# Render -> /var/data/chroma
+
+CHROMA_PATH = os.getenv("CHROMA_PATH", "./chroma_db")
+
+print("📦 Chroma DB path:", CHROMA_PATH)
 
 client = chromadb.Client(
     Settings(
-        persist_directory="/var/data/chroma",
+        persist_directory=CHROMA_PATH,
         anonymized_telemetry=False
     )
 )
-
 
 
 # =========================
@@ -40,8 +45,8 @@ def add_chunks(collection_name, chunks):
         ids=ids
     )
 
-    print("Stored chunks:", len(chunks))
-    print("Total now:", col.count())
+    print("✅ Stored chunks:", len(chunks))
+    print("📊 Total now:", col.count())
 
 
 # =========================
@@ -49,6 +54,9 @@ def add_chunks(collection_name, chunks):
 # =========================
 def search(collection_name, query):
     col = get_collection(collection_name)
+
+    if col.count() == 0:
+        return []
 
     results = col.query(
         query_texts=[query],
@@ -64,8 +72,7 @@ def search(collection_name, query):
 def delete_collection(name):
     try:
         client.delete_collection(name)
-        print("Deleted:", name)
+        print("🗑 Deleted:", name)
     except:
         pass
-
 
