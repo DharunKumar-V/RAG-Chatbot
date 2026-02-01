@@ -169,15 +169,19 @@ export default function Chat() {
      UI
   ========================= */
   return (
-    <div className="flex h-screen bg-[#0f0f0f] text-white">
+    <div className="flex flex-col md:flex-row h-screen bg-[#0f0f0f] text-white">
 
-      <Sidebar
-        chats={chats}
-        activeChat={chatId}
-        selectChat={selectChat}
-        newChat={createChat}
-        logout={logout}
-      />
+
+    <div className="hidden md:block">
+    <Sidebar
+    chats={chats}
+    activeChat={chatId}
+    selectChat={selectChat}
+    newChat={createChat}
+    logout={logout}
+    />
+    </div>
+
 
       <div className="flex-1 flex flex-col">
 
@@ -211,7 +215,8 @@ export default function Chat() {
         {/* Input bar */}
         {chatId && (
           <div className="border-t border-gray-800 p-4">
-            <div className="flex items-center gap-3 bg-gray-900 rounded-2xl px-3 py-2">
+            <div className="flex flex-wrap md:flex-nowrap items-center gap-2 bg-gray-900 rounded-2xl px-3 py-2">
+
 
               <button onClick={() => fileRef.current.click()}>
                 {uploading ? "⏳" : "📎"}
@@ -228,7 +233,8 @@ export default function Chat() {
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="Website URL..."
-                className="bg-gray-800 px-3 py-2 rounded-xl text-sm w-56 outline-none"
+                className="bg-gray-800 px-3 py-2 rounded-xl text-sm w-full md:w-56 outline-none"
+
               />
 
               <button

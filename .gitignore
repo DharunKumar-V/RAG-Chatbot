@@ -1,14 +1,23 @@
-# python
+########################
+# Backend (Python)
+########################
 backend/venv/
 backend/__pycache__/
+backend/*.pyc
 backend/.env
 backend/chroma_db/
+backend/*.log
 
-# node
+########################
+# Frontend (React)
+########################
 frontend/node_modules/
 frontend/build/
+frontend/.env
 
-# misc
-.vscode/
+########################
+# OS / Editor
+########################
 .DS_Store
+.vscode/
 *.log
