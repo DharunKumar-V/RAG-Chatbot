@@ -4,9 +4,16 @@ import chromadb
 # ======================================================
 # ✅ TRUE DISK PERSISTENCE (NEW CHROMA WAY)
 # ======================================================
-client = chromadb.PersistentClient(
-    path="./chroma_db"   # ⭐ automatically saves here
+
+from chromadb.config import Settings
+
+client = chromadb.Client(
+    Settings(
+        persist_directory="/var/data/chroma",
+        anonymized_telemetry=False
+    )
 )
+
 
 
 # =========================
