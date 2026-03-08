@@ -59,7 +59,7 @@ Streaming AI Response
 # 📸 Sample Outputs
 
 ### Chat Interface
-![Chat UI](assets/chat-ui.png)
+![Chat UI](assets/ui.png)
 
 ---
 
@@ -74,7 +74,7 @@ Streaming AI Response
 ---
 
 ### AI Generated Response
-![AI Response](assets/ai-response.png)
+![AI Response](assets/response.png)
 
 ---
 
