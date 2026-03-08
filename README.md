@@ -64,12 +64,12 @@ Streaming AI Response
 ---
 
 ### Upload PDF
-![PDF Upload](assets/pdf-upload.png)
+![PDF Upload](assets/pdf.png)
 
 ---
 
 ### Upload Website
-![Website Upload](assets/url-upload.png)
+![Website Upload](assets/web.png)
 
 ---
 
