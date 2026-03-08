@@ -298,9 +298,9 @@ rag-chatbot
 
 **Dharun Kumar**
 
-
 Computer Science Engineering Student  
 AI • Machine Learning • Full-Stack Development
 
 GitHub  
 https://github.com/DharunKumar-V
+LinkedIn: https://www.linkedin.com/in/dharunkumar100/
