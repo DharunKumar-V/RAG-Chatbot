@@ -301,6 +301,7 @@ rag-chatbot
 Computer Science Engineering Student  
 AI • Machine Learning • Full-Stack Development
 
-GitHub  
-https://github.com/DharunKumar-V
+GitHub: https://github.com/DharunKumar-V  
 LinkedIn: https://www.linkedin.com/in/dharunkumar100/
+
+⭐ If you found this project useful, consider giving it a star!
