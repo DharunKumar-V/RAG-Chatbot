@@ -298,6 +298,13 @@ rag-chatbot
 
 **Dharun Kumar**
 
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a **star ⭐ on GitHub**.
+
+
 Computer Science Engineering Student  
 AI • Machine Learning • Full-Stack Development
 
